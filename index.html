@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conteúdo Exclusivo +18 - Pagamento via Pix</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 30px;
+      margin: 0;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px #ff416c;
+    }
+    h1 {
+      color: #ff416c;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.2em;
+      margin-bottom: 25px;
+    }
+    .pix-code {
+      background: #222;
+      padding: 15px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 1.1em;
+      user-select: all;
+      word-break: break-word;
+      margin-bottom: 20px;
+    }
+    button {
+      background: linear-gradient(90deg, #ff4b2b, #ff416c);
+      border: none;
+      padding: 15px 25px;
+      font-size: 1em;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    button:hover {
+      transform: scale(1.05);
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="https://i.ibb.co/HTrLQV9g/BANNER-GRUPO.png" alt="Conteúdo Exclusivo +18" />
+
+  <h1>Acesso ao Conteúdo Exclusivo +18</h1>
+  <p>Entre agora para o grupo exclusivo com conteúdo adulto 🔥<br>
+  Sem mensalidade, sem burocracia. Pagamento via Pix e acesso imediato.</p>
+
+  <div class="pix-code" id="pixCode">
+    00020101021226810014br.gov.bcb.pix2559qr.woovi.com/qr/v2/cob/158c5d31-a527-4c15-bf5e-84620cf4fb71520400005303986540516.905802BR5909PushinPay6009Sao_Paulo622905256d0b4918af81438c975050e9e6304C82A
+  </div>
+
+  <button onclick="copiarPix()">Copiar código Pix</button>
+
+  <div class="footer">
+    <p>Este conteúdo é destinado a maiores de 18 anos.<br>Ao continuar, você confirma que tem idade legal para acessá-lo.</p>
+  </div>
+
+  <script>
+    function copiarPix() {
+      const el = document.getElementById('pixCode');
+      const range = document.createRange();
+      range.selectNode(el);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      try {
+        document.execCommand('copy');
+        alert('Código Pix copiado!');
+      } catch(err) {
+        alert('Falha ao copiar, copie manualmente.');
+      }
+      window.getSelection().removeAllRanges();
+    }
+  </script>
+
+</body>
+</html>
